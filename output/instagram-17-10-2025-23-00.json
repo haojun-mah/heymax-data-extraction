@@ -1,0 +1,141 @@
+{
+  "platform": "instagram",
+  "url": "https://www.instagram.com/reel/DPVGU95FV_n/?utm_source=ig_web_copy_link",
+  "status": "success",
+  "text": "Here we are, we're gonna get a rojamo, classic Xi'an street food. Oh, that's a classic fatty pork rojamo peanut bun in Xi'an China. Look at this guys, she's slicing up the pork to get some green bell pepper, some onion. She's adding in so much pork gravy, the stewed pork gravy, that's what gives it flavor guys. It's like an aromatic soy sauce, braised in the soy sauce, so it's a little salty and super aromatic. Look at that, here's the peanut. Oh, it's very fragrant. Look at that, the fatty rojamo, fully loaded, the extra pork. Mmm, mmm. It's like a spicy, fatty, ultimate pork pita, this is what they say is the origin of the hamburger.",
+  "data": {
+    "source_url": "https://www.instagram.com/reel/DPVGU95FV_n/?utm_source=ig_web_copy_link",
+    "processor": "https://apify.com/agentx/video-transcript?fpr=aiagentapi",
+    "processed_at": "2025-10-17T14:59:25.143486+00:00",
+    "platform": "Instagram",
+    "title": "Video by thefoodranger",
+    "description": "Found the origin of the hamburger in Xi’an, China! Found deep in the morning market!!",
+    "author": "Trevor James",
+    "author_id": "thefoodranger",
+    "duration": 44,
+    "audio_title": null,
+    "audio_artist": null,
+    "view_count": null,
+    "like_count": 2215,
+    "shares_count": null,
+    "dislike_count": null,
+    "comment_count": 28,
+    "categories": [],
+    "tags": [],
+    "published_at": "2025-10-03T02:05:28",
+    "thumbnail": "https://api.apify.com/v2/key-value-stores/QW9vAdRUOCLPpd8xZ/records/DPVGU95FV_n.png?signature=1twsaPa2zLXVoe146aCQ3",
+    "video_url": "https://api.apify.com/v2/key-value-stores/QW9vAdRUOCLPpd8xZ/records/DPVGU95FV_n.mp4?signature=x9HnHcC8ThkYRqRWTTNS",
+    "source_transcript": {
+      "language": "English",
+      "text": " Here we are, we're gonna get a rojamo, classic Xi'an street food. Oh, that's a classic fatty pork rojamo peanut bun in Xi'an China. Look at this guys, she's slicing up the pork to get some green bell pepper, some onion. She's adding in so much pork gravy, the stewed pork gravy, that's what gives it flavor guys. It's like an aromatic soy sauce, braised in the soy sauce, so it's a little salty and super aromatic. Look at that, here's the peanut. Oh, it's very fragrant. Look at that, the fatty rojamo, fully loaded, the extra pork. Mmm, mmm. It's like a spicy, fatty, ultimate pork pita, this is what they say is the origin of the hamburger.",
+      "segments": [
+        {
+          "start": "00:00:00.000",
+          "end": "00:00:04.120",
+          "text": "Here we are, we're gonna get a rojamo, classic Xi'an street food."
+        },
+        {
+          "start": "00:00:04.120",
+          "end": "00:00:09.000",
+          "text": "Oh, that's a classic fatty pork rojamo peanut bun in Xi'an China."
+        },
+        {
+          "start": "00:00:09.000",
+          "end": "00:00:13.800",
+          "text": "Look at this guys, she's slicing up the pork to get some green bell pepper, some onion."
+        },
+        {
+          "start": "00:00:13.800",
+          "end": "00:00:19.240",
+          "text": "She's adding in so much pork gravy, the stewed pork gravy, that's what gives it flavor guys."
+        },
+        {
+          "start": "00:00:19.240",
+          "end": "00:00:25.039",
+          "text": "It's like an aromatic soy sauce, braised in the soy sauce, so it's a little salty and super aromatic."
+        },
+        {
+          "start": "00:00:25.039",
+          "end": "00:00:26.320",
+          "text": "Look at that, here's the peanut."
+        },
+        {
+          "start": "00:00:26.320",
+          "end": "00:00:28.400",
+          "text": "Oh, it's very fragrant."
+        },
+        {
+          "start": "00:00:28.400",
+          "end": "00:00:33.320",
+          "text": "Look at that, the fatty rojamo, fully loaded, the extra pork."
+        },
+        {
+          "start": "00:00:35.719",
+          "end": "00:00:38.960",
+          "text": "Mmm, mmm."
+        },
+        {
+          "start": "00:00:38.960",
+          "end": "00:00:44.680",
+          "text": "It's like a spicy, fatty, ultimate pork pita, this is what they say is the origin of the hamburger."
+        }
+      ]
+    },
+    "target_transcript": {
+      "language": "English",
+      "text": " Here we are, we're gonna get a rojamo, classic Xi'an street food. Oh, that's a classic fatty pork rojamo peanut bun in Xi'an China. Look at this guys, she's slicing up the pork to get some green bell pepper, some onion. She's adding in so much pork gravy, the stewed pork gravy, that's what gives it flavor guys. It's like an aromatic soy sauce, braised in the soy sauce, so it's a little salty and super aromatic. Look at that, here's the peanut. Oh, it's very fragrant. Look at that, the fatty rojamo, fully loaded, the extra pork. Mmm, mmm. It's like a spicy, fatty, ultimate pork pita, this is what they say is the origin of the hamburger.",
+      "segments": [
+        {
+          "start": "00:00:00.000",
+          "end": "00:00:04.120",
+          "text": "Here we are, we're gonna get a rojamo, classic Xi'an street food."
+        },
+        {
+          "start": "00:00:04.120",
+          "end": "00:00:09.000",
+          "text": "Oh, that's a classic fatty pork rojamo peanut bun in Xi'an China."
+        },
+        {
+          "start": "00:00:09.000",
+          "end": "00:00:13.800",
+          "text": "Look at this guys, she's slicing up the pork to get some green bell pepper, some onion."
+        },
+        {
+          "start": "00:00:13.800",
+          "end": "00:00:19.240",
+          "text": "She's adding in so much pork gravy, the stewed pork gravy, that's what gives it flavor guys."
+        },
+        {
+          "start": "00:00:19.240",
+          "end": "00:00:25.039",
+          "text": "It's like an aromatic soy sauce, braised in the soy sauce, so it's a little salty and super aromatic."
+        },
+        {
+          "start": "00:00:25.039",
+          "end": "00:00:26.320",
+          "text": "Look at that, here's the peanut."
+        },
+        {
+          "start": "00:00:26.320",
+          "end": "00:00:28.400",
+          "text": "Oh, it's very fragrant."
+        },
+        {
+          "start": "00:00:28.400",
+          "end": "00:00:33.320",
+          "text": "Look at that, the fatty rojamo, fully loaded, the extra pork."
+        },
+        {
+          "start": "00:00:35.719",
+          "end": "00:00:38.960",
+          "text": "Mmm, mmm."
+        },
+        {
+          "start": "00:00:38.960",
+          "end": "00:00:44.680",
+          "text": "It's like a spicy, fatty, ultimate pork pita, this is what they say is the origin of the hamburger."
+        }
+      ]
+    }
+  }
+}

@@ -1,13 +1,14 @@
-"""
-Main orchestrator script for URL content extraction workflow
-This script takes a URL, classifies it, and calls the appropriate extractor
-"""
+"""Main orchestrator for URL content extraction workflow."""
 
+import json
 import sys
-from link_classifier import classify_link
-from youtube_extracter import extract_youtube_content
-from instagram_extractor import extract_instagram_content
-from tiktok_extractor import extract_tiktok_content
+from datetime import datetime
+from pathlib import Path
+
+from utils.link_classifier import classify_link
+from scraper.youtube_extracter import extract_youtube_content
+from scraper.instagram_extractor import extract_instagram_content
+from scraper.tiktok_extractor import extract_tiktok_content
 
 def process_url(url):
     """
@@ -44,10 +45,40 @@ def process_url(url):
             "message": f"Unsupported platform: {platform}"
         }
     
+    save_result(result, platform, url)
+
     print("Processing complete!")
     print("=" * 60)
-    
+
     return result
+
+
+def save_result(result, platform, url):
+    """Persist the extraction result to <platform>.json."""
+
+    output_platform = (platform or result.get("platform") or "unknown").lower()
+    timestamp = datetime.now().strftime("%d-%m-%Y-%H-%M")
+    filename = f"{output_platform}-{timestamp}.json"
+    output_dir = Path("output")
+    output_dir.mkdir(exist_ok=True)
+    output_path = output_dir / filename
+    payload_for_file = result
+    if isinstance(result, dict):
+        payload_for_file = {**result}
+        if output_platform == "youtube" and "text" in payload_for_file:
+            payload_for_file = {"text": payload_for_file["text"]}
+            json_str = json.dumps(payload_for_file, ensure_ascii=False)
+        else:
+            if "platform" not in payload_for_file:
+                payload_for_file["platform"] = output_platform
+            if "url" not in payload_for_file:
+                payload_for_file["url"] = url
+            json_str = json.dumps(payload_for_file, indent=2, ensure_ascii=False)
+    else:
+        json_str = json.dumps(result, indent=2, ensure_ascii=False)
+
+    output_path.write_text(json_str)
+    print(f"Saved output to {output_path}")
 
 def main():
     """
