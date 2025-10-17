@@ -1,0 +1,7 @@
+{
+  "platform": "instagram",
+  "url": "https://www.instagram.com/reel/DPdLQuTCFHp/?igsh=MTgyem9obXZ5bjdi",
+  "status": "error",
+  "error": "Supadata transcript request failed: HTTPSConnectionPool(host='api.supadata.ai', port=443): Read timed out. (read timeout=30)",
+  "text": ""
+}

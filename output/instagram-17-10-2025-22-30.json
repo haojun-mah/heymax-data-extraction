@@ -1,0 +1,7 @@
+{
+  "platform": "instagram",
+  "url": "https://www.instagram.com/reel/DPVGU95FV_n/?utm_source=ig_web_copy_link",
+  "status": "error",
+  "error": "OPENAI_API_KEY is missing; required for Instagram transcript actor.",
+  "text": ""
+}

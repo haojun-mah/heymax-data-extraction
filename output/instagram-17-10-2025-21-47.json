@@ -1,0 +1,7 @@
+{
+  "platform": "instagram",
+  "url": "https://www.instagram.com/reel/DPdLQuTCFHp/?igsh=MTgyem9obXZ5bjdi",
+  "status": "error",
+  "error": "Supadata transcript request failed: 404 Client Error: Not Found for url: https://api.supadata.ai/transcript?url=https%3A%2F%2Fwww.instagram.com%2Freel%2FDPdLQuTCFHp%2F%3Figsh%3DMTgyem9obXZ5bjdi&mode=auto&text=true",
+  "text": ""
+}
