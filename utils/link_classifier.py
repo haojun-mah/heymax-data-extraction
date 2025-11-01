@@ -15,7 +15,8 @@ def classify_link(url):
     youtube_patterns = [
         r'(?:https?://)?(?:www\.)?(?:youtube\.com/watch\?v=|youtu\.be/|youtube\.com/embed/|youtube\.com/v/)',
         r'(?:https?://)?(?:www\.)?(?:m\.youtube\.com/watch\?v=)',
-        r'(?:https?://)?(?:www\.)?(?:youtube\.com/shorts/)'
+        r'(?:https?://)?(?:www\.)?(?:youtube\.com/shorts/)',
+        r'(?:https?://)?yout\.be/'
     ]
     
     # Instagram patterns

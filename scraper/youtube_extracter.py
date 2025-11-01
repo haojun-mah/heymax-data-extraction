@@ -9,7 +9,7 @@ def extract_youtube_content(url: str) -> Dict[str, Any]:
     
     try:
         # Extract Video ID from URL as this API takes in Video ID 
-        video_id_match = re.search(r'(?:v=|youtu\.be/|embed/|v/|shorts/)([^&\n?#]+)', url)
+        video_id_match = re.search(r'(?:v=|youtu\.be/|yout\.be/|embed/|v/|shorts/)([^&\n?#]+)', url)
         if not video_id_match:
             raise ValueError("Could not extract video ID from URL")
         
