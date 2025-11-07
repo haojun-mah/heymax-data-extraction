@@ -212,12 +212,14 @@ def extract_instagram_content(
         return {
             "platform": "instagram",
             "url": url,
+            "text": "",
+            "transcript_source": "none",
+            "metadata": {},
             "status": "error",
             "error": (
                 "Invalid target language. Supported values include: "
                 + ", ".join(_LANGUAGE_CHOICES)
             ),
-            "text": "",
         }
 
     run_input: Dict[str, Any] = {
@@ -232,9 +234,11 @@ def extract_instagram_content(
         return {
             "platform": "instagram",
             "url": url,
+            "text": "",
+            "transcript_source": "none",
+            "metadata": {},
             "status": "error",
             "error": f"Failed to start Instagram transcript actor: {exc}",
-            "text": "",
         }
 
     for item in dataset.iterate_items():
@@ -242,20 +246,36 @@ def extract_instagram_content(
             return {
                 "platform": "instagram",
                 "url": url,
+                "text": "",
+                "transcript_source": "none",
+                "metadata": {},
                 "status": "error",
                 "error": str(item.get("error")),
-                "text": "",
-                "data": item,
             }
 
         transcript_text = _extract_primary_text(item if isinstance(item, dict) else {})
+        item_dict = item if isinstance(item, dict) else {}
+        
+        # Extract metadata from the item
+        metadata = {}
+        if item_dict.get("author"):
+            metadata["author"] = item_dict["author"]
+        if item_dict.get("author_id"):
+            metadata["author_id"] = item_dict["author_id"]
+        if item_dict.get("title"):
+            metadata["title"] = item_dict["title"]
+        if item_dict.get("published_at"):
+            metadata["createTime"] = item_dict["published_at"]
+        if item_dict.get("duration"):
+            metadata["duration"] = item_dict["duration"]
 
         payload: Dict[str, Any] = {
             "platform": "instagram",
             "url": url,
-            "status": item.get("status", "success") if isinstance(item, dict) else "success",
             "text": transcript_text,
-            "data": item,
+            "transcript_source": "api" if transcript_text else "none",
+            "metadata": metadata,
+            "status": item_dict.get("status", "success") if transcript_text else "no_transcript",
         }
 
         if not transcript_text:
@@ -266,7 +286,9 @@ def extract_instagram_content(
     return {
         "platform": "instagram",
         "url": url,
+        "text": "",
+        "transcript_source": "none",
+        "metadata": {},
         "status": "error",
         "error": "Video transcript actor returned an empty dataset.",
-        "text": "",
     }

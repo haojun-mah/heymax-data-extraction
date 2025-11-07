@@ -73,15 +73,11 @@ def save_result(result, platform, url):
     payload_for_file = result
     if isinstance(result, dict):
         payload_for_file = {**result}
-        if output_platform == "youtube" and "text" in payload_for_file:
-            payload_for_file = {"text": payload_for_file["text"]}
-            json_str = json.dumps(payload_for_file, ensure_ascii=False)
-        else:
-            if "platform" not in payload_for_file:
-                payload_for_file["platform"] = output_platform
-            if "url" not in payload_for_file:
-                payload_for_file["url"] = url
-            json_str = json.dumps(payload_for_file, indent=2, ensure_ascii=False)
+        if "platform" not in payload_for_file:
+            payload_for_file["platform"] = output_platform
+        if "url" not in payload_for_file:
+            payload_for_file["url"] = url
+        json_str = json.dumps(payload_for_file, indent=2, ensure_ascii=False)
     else:
         json_str = json.dumps(result, indent=2, ensure_ascii=False)
 

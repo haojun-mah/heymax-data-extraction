@@ -42,7 +42,10 @@ def extract_youtube_content(url: str) -> Dict[str, Any]:
             "platform": "youtube",
             "url": url,
             "text": combined_text,
-            "transcript": transcript_segments,
+            "transcript_source": "api",
+            "metadata": {
+                "id": video_id,
+            },
             "status": "success",
         }
 
@@ -53,6 +56,9 @@ def extract_youtube_content(url: str) -> Dict[str, Any]:
         error_data = {
             "platform": "youtube",
             "url": url,
+            "text": "",
+            "transcript_source": "none",
+            "metadata": {},
             "status": "error",
             "error": str(e),
         }
