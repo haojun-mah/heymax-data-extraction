@@ -2,13 +2,13 @@ import re
 
 def classify_link(url):
     """
-    Classify a URL to determine if it's from YouTube, Instagram, or TikTok
+    Classify a URL to determine if it's from YouTube, Instagram, TikTok, or Airbnb
     
     Args:
         url (str): The URL to classify
         
     Returns:
-        str: The platform name ('youtube', 'instagram', 'tiktok') or 'unknown'
+        str: The platform name ('youtube', 'instagram', 'tiktok', 'airbnb') or 'unknown'
     """
     
     # YouTube patterns
@@ -36,6 +36,13 @@ def classify_link(url):
         r'(?:https?://)?(?:www\.)?tiktok\.com/v/\d+'
     ]
     
+    # Airbnb patterns
+    airbnb_patterns = [
+        r'(?:https?://)?(?:www\.)?airbnb\.(?:com|co\.\w+)/',
+        r'(?:https?://)?(?:www\.)?airbnb\.com/rooms/',
+        r'(?:https?://)?(?:www\.)?airbnb\.com/s/',
+    ]
+    
     # Check for YouTube
     for pattern in youtube_patterns:
         if re.search(pattern, url, re.IGNORECASE):
@@ -50,5 +57,10 @@ def classify_link(url):
     for pattern in tiktok_patterns:
         if re.search(pattern, url, re.IGNORECASE):
             return 'tiktok'
+    
+    # Check for Airbnb
+    for pattern in airbnb_patterns:
+        if re.search(pattern, url, re.IGNORECASE):
+            return 'airbnb'
     
     return 'unknown'

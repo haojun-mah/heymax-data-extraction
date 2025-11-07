@@ -36,6 +36,14 @@ def process_url(url):
     elif platform == 'tiktok':
         print("Calling TikTok extractor...")
         result = extract_tiktok_content(url)
+    elif platform == 'airbnb':
+        print("airbnb links are not supported for extraction.")
+        result = {
+            "platform": "airbnb",
+            "url": url,
+            "status": "skipped",
+            "message": "airbnb links are not supported for content extraction"
+        }
     else:
         print(f"Unknown platform: {platform}")
         result = {
